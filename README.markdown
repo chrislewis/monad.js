@@ -1,4 +1,4 @@
-node-monad provdes a simple monad data type for NodeJS (or any CommonJS implementation).
+monad.js provdes a simple monad data type for NodeJS (or any CommonJS implementation).
 
     var monad = require('./monad');
     
