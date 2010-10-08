@@ -4,7 +4,7 @@
   "directories" : { "lib" : "./lib" },
   "main": "./index",
   "author": "Chris Lewis",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository" : {
     "type" : "git",
     "url" : "http://github.com/chrislewis/monad.js.git"
