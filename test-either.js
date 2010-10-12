@@ -29,3 +29,36 @@ assert.equal(right.left().map(append('go!')).fold(identity, identity), 'ok');
 assert.equal(right.right().map(append('go!')).fold(identity, identity), 'ok go!');
 assert.equal(left.right().map(append('go!')).fold(identity, identity), 'error');
 assert.equal(left.left().map(append('go!')).fold(identity, identity), 'error go!');
+
+/* Either predicates: isLeft, isRight */
+function product(x) {
+  return function(y) {
+    return x * y;
+  }
+}
+
+function zero() {
+  return 0;
+}
+
+var eithers = [
+  m.left(1),
+  m.left(2),
+  m.left(3),
+  m.right(4),
+  m.right(5)
+];
+
+assert.equal(eithers.filter(m.isLeft).length, 3);
+assert.equal(eithers.filter(m.isLeft).reduce(function(p, c) {
+  return c.fold(
+    product(p), zero
+  );
+}, 1), 6);
+
+assert.equal(eithers.filter(m.isRight).length, 2);
+assert.equal(eithers.filter(m.isRight).reduce(function(p, c) {
+  return c.fold(
+    zero, product(p)
+  );
+}, 1), 20);
