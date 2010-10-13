@@ -1,10 +1,8 @@
 {
   "name": "monad",
   "description": "Monadic types for removing reference ambiguities.",
-  "directories" : { "lib" : "./lib" },
-  "main": "./index",
-  "author": "Chris Lewis",
-  "version": "0.0.2",
+  "version": "0.0.3",
+  "author": "Chris Lewis <chris@thegodcode.net>",
   "repository" : {
     "type" : "git",
     "url" : "http://github.com/chrislewis/monad.js.git"
@@ -15,5 +13,6 @@
       "type" : "MIT",
       "url" : "http://github.com/chrislewis/monad.js/master/LICENSE"
     }
-  ]
+  ],
+  "directories" : { "lib" : "./lib" },
 }
