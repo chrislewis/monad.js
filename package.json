@@ -14,5 +14,5 @@
       "url" : "http://github.com/chrislewis/monad.js/master/LICENSE"
     }
   ],
-  "directories" : { "lib" : "./lib" },
+  "directories" : { "lib" : "./lib" }
 }
